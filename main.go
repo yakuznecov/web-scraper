@@ -38,7 +38,7 @@ func crawl(url string, ch chan string, chFinished chan bool) {
 
 	z := html.NewTokenizer(b) // токенизатор html
 
-	for{
+	for {
 		tt := z.Next() // получить следующий токен
 
 		switch {
@@ -70,7 +70,7 @@ func crawl(url string, ch chan string, chFinished chan bool) {
 
 func main() {
 	foundUrls := make(map[string]bool) // найденные url-адреса
-	seedUrls := os.Args[1:] // Получение аргументов командной строки 
+	seedUrls := os.Args[1:] // Получение аргументов командной строки
 
 	chUrls := make(chan string) // канал url
 	chFinished := make(chan bool) // канал завершения работы

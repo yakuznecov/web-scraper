@@ -1,38 +1,38 @@
-# Simple Web scraper
+# Простой веб-парсер url на странице
 
-This is a simple web scraper written in Go. It accepts a list of URLs as input, crawls these pages, extracts all the links (URLs) from each page, and outputs the unique URLs found.
+Это простой веб-парсер, написанный на Go. Он принимает список URL в качестве входных данных, обходит эти страницы, извлекает все ссылки (URL) с каждой страницы и выводит найденные уникальные URL.
 
-## Features
+## Возможности
 
-- Parallel crawling using goroutines
-- Extraction of links from HTML
-- Collection of unique URLs
-- Simple and efficient design
+Программа предназначена для извлечения уникальных URL-адресов из заданных начальных URL.
 
-## Requirements
+- Параллельный обход с использованием горутин
+- Извлечение ссылок из HTML
+- Сбор уникальных URL
 
-- Go 1.16 or later
+## Требования
 
-## Installation
+- Go 1.16 или позже
 
-1. Clone the repository:
+## Установка
+
+1. Клонирование репозитория:
 
    ```sh
    git clone https://github.com/yakuznecov/web-scraper.git
    cd web-scraper
    ```
 
-2. Build the project:
+2. Сборка проекта:
 
    ```sh
-   go build -o scraper
+   go build -o web-scraper
    ```
 
-## Usage
+## Использование
 
-To run the scraper, provide a list of seed URLs as arguments:
+Чтобы запустить парсер, напишите список начальных URL в качестве аргументов:
 
 ```sh
-./scraper http://example.com http://example.org
-
+go run main.go http://example.com http://example.org
 ```
